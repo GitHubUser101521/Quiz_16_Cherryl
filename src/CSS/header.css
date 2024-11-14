@@ -1,0 +1,15 @@
+.container {
+    padding: 0 15rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px 0 rgb(225, 225, 225);
+}
+
+#account-select {
+    border: solid 1.5px #d34f0c;
+    border-radius: 30px;
+    padding: .5rem 1rem;
+    font-family: "DM Sans";
+    font-weight: 700;
+    color: #d34f0c;
+}

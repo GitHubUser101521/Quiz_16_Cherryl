@@ -1,0 +1,49 @@
+/* HTML, BODY */ 
+
+html {
+    font-family: "DM Sans";
+}
+
+body {
+    margin: 0;
+}
+
+/* FONTS */
+
+.color-orange {
+    color: #d34f0c;
+}
+.color-gray {
+    color: gray;
+}
+
+.size-half-rem {
+    font-size: 1.5rem;
+}
+
+.weight-800 {
+    font-weight: 800;
+}
+
+/* GENERAL */ 
+
+.logo {
+    width: 16px;
+    height: 16px;
+}
+
+/* DISPLAYS */ 
+
+.flex {
+    display: flex;
+}
+.flex .justify-between {
+    justify-content: space-between;
+}
+.flex .align-center {
+    align-items: center;
+}
+
+.gap-10px {
+    gap: 10px;
+}
