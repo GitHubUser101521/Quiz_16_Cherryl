@@ -1,0 +1,10 @@
+#trending-btn {
+    border: solid 2px #d34f0c;
+    padding: .5rem 0;
+    background-color: transparent;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #d34f0c;
+    margin-top: 20px;
+}

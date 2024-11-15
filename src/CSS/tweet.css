@@ -1,0 +1,56 @@
+#profile-picture {
+    background-color: rebeccapurple;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+}
+
+#tweet-something {
+    font-family: "DM Sans";
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+#tweet-area {
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 6px 0 rgb(193, 193, 193);
+}
+
+#edit-tweet {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+#edit-tweet button {
+    background-color: #d34f0c;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    padding: 0 1rem;
+    height: 36px;
+}
+
+.icon-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-30 {
+    width: 30px;
+    height: 30px;
+}
+
+#tweets {
+    margin-top: 1rem;
+}

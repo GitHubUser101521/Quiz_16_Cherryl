@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+h3, h2, p {
+    margin: 0;
+}
+
 /* FONTS */
 
 .color-orange {
@@ -43,7 +47,21 @@ body {
 .flex .align-center {
     align-items: center;
 }
+.column {
+    flex-direction: column;
+}
 
 .gap-10px {
     gap: 10px;
+}
+.gap-20px {
+    gap: 20px;
+}
+
+.gap-30px {
+    gap: 30px;
+}
+
+.border-bottom {
+    box-shadow: 0 4px 7px -5px rgb(211, 211, 211);
 }

@@ -1,5 +1,5 @@
 .container {
-    padding: 0 15rem;
+    padding: 1.5rem 15rem;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 4px 0 rgb(225, 225, 225);

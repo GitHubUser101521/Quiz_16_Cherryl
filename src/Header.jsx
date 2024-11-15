@@ -1,8 +1,6 @@
 import React from 'react'
 import './CSS/header.css'
 
-import checkLogo from './Assets/check.png'
-
 function Header() {
   return (
     <div className='flex justify-between align-center container'>
@@ -11,12 +9,12 @@ function Header() {
       </div>
 
       <div className='flex align-center gap-10px'>
-        <img src={checkLogo} alt="check-logo" className='logo'/>
+        <img src="/public/check.png" alt="check-logo" className='logo'/>
         <p className='color-gray'><i>verified</i></p>
         <select id="account-select">
-          <option value="" for="account-select">acc 1</option>
-          <option value="" for="account-select">acc 2</option>
-          <option value="" for="account-select">acc 3</option>
+          <option value="">acc 1</option>
+          <option value="">acc 2</option>
+          <option value="">acc 3</option>
         </select>
       </div>
     </div>
