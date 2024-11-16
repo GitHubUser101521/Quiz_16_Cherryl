@@ -55,3 +55,11 @@
 #tweets {
     margin-top: 1rem;
 }
+
+.tweet-box {
+    max-width: 508px;
+
+    p {
+        word-wrap: break-word;
+    }
+}

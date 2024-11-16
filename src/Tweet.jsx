@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import UserTweets from './UserTweets.jsx'
+// UserTweets is for container all the tweet, but havent been developed
 import CharacterCounter from './CharacterCounter.jsx'
+import jsonData from './Accounts.json';
 import './CSS/tweet.css'
 
 function Tweet() {
+  const [accounts, _] = useState(jsonData.accounts)
+  const [currentAccount, setCurrentAccount] = useState(accounts[0]);
+  console.log(currentAccount)
   const [tweetText, setTweetText] = useState('')
   const [tweetsData, setTweetsData] = useState([]);
   const [newTweet, setNewTweet]= useState({
@@ -38,8 +43,7 @@ function Tweet() {
       <div id="tweet-area">
         <div className='flex gap-20px'>
           <div id="profile-picture">
-            C 
-            {/* Slice the first initial of the account */}
+            {currentAccount[0]}
           </div>
 
           <textarea id="tweet-something" placeholder='What happened today?' value={tweetText} onChange={handleChange}></textarea>
