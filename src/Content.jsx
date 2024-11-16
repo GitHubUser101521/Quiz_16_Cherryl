@@ -11,7 +11,7 @@ function Content() {
       <div>
         <Navigation />
       </div>
-      <div>
+      <div style={{flex: '1',}}>
         <Tweet />
       </div>
       <div>

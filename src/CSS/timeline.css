@@ -1,0 +1,45 @@
+.align-center {
+    align-items: center;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.tweet-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 0 6px 0 rgb(216, 216, 216);
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+
+.tweet-card:first-of-type {
+    margin-top: 1rem;
+}
+
+.interact-icon {
+    display: flex;
+    gap: 5px;
+    opacity: 0.6;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+}
+
+.interact-icon:hover {
+    cursor: pointer;
+}
+
+.time-stamp {
+    font-size: .8rem;
+    color: gray;
+}

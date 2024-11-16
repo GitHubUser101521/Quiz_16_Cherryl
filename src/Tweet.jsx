@@ -1,20 +1,16 @@
 import React, { useState, useContext} from 'react'
 import CharacterCounter from './CharacterCounter.jsx'
 import TimeLine from './Timeline.jsx'
+import NoTweetFallback from './NoTweetFallback.jsx'
 import './CSS/tweet.css'
 import { currentAccountContext } from './Header.jsx'
 
 function Tweet() {
+  const newTime = new Date().toLocaleString();
   const currentAccount = useContext(currentAccountContext);
   const [tweetText, setTweetText] = useState('')
   const [tweetsData, setTweetsData] = useState([]);
-  const [newTweet, setNewTweet]= useState({
-    account: currentAccount,
-    tweet: tweetText,
-    likes: 0,
-    comments: 0,
-    shares: 0,
-  });
+  const [newTweet, setNewTweet]= useState();
 
   const handleChange = (e) => {
     if (tweetText.length >= 150) {
@@ -37,6 +33,7 @@ function Tweet() {
       setTweetsData([...tweetsData, { 
         account: currentAccount,
         tweet: tweetText, 
+        timeStamp: newTime,
         likes: 0, 
         comments: 0, 
         shares: 0 
@@ -70,8 +67,7 @@ function Tweet() {
         </div>
 
         <div id="tweets">
-          <h2 className='color-gray'>What's happening</h2>
-          <TimeLine data={tweetsData}/>
+          {tweetsData.length === 0 ? <NoTweetFallback /> : <TimeLine data={tweetsData}/>}
         </div>
       </div>
     </>
