@@ -2,6 +2,7 @@ import React, { useState, useContext} from 'react'
 import UserTweets from './UserTweets.jsx'
 // UserTweets is for container all the tweet, but havent been developed
 import CharacterCounter from './CharacterCounter.jsx'
+import TimeLine from './Timeline.jsx'
 import './CSS/tweet.css'
 import { currentAccountContext } from './Header.jsx'
 
@@ -45,7 +46,7 @@ function Tweet() {
           </div>
 
           <textarea id="tweet-something" placeholder='What happened today?' value={tweetText} onChange={handleChange} ></textarea>
-        </div>
+a        </div>
 
         <div id="edit-tweet" className='flex align-center justify-between border-bottom'>
           <div className='flex gap-30px'>
@@ -62,11 +63,7 @@ function Tweet() {
 
         <div id="tweets">
           <h2 className='color-gray'>What's happening</h2>
-          {tweetsData.map((tweet, index) => (
-            <div className="tweet-box" key={index}>
-              <p>{tweet.tweet}</p>
-            </div>
-          ))}
+          <TimeLine data={tweetsData}/>
         </div>
       </div>
     </>
