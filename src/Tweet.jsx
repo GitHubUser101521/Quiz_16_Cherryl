@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext} from 'react'
 import UserTweets from './UserTweets.jsx'
 // UserTweets is for container all the tweet, but havent been developed
 import CharacterCounter from './CharacterCounter.jsx'
-import jsonData from './Accounts.json';
 import './CSS/tweet.css'
+import { currentAccountContext } from './Header.jsx'
 
 function Tweet() {
-  const [accounts, _] = useState(jsonData.accounts)
-  const [currentAccount, setCurrentAccount] = useState(accounts[0]);
-  console.log(currentAccount)
+  const currentAccount = useContext(currentAccountContext);
   const [tweetText, setTweetText] = useState('')
   const [tweetsData, setTweetsData] = useState([]);
   const [newTweet, setNewTweet]= useState({
@@ -46,7 +44,7 @@ function Tweet() {
             {currentAccount[0]}
           </div>
 
-          <textarea id="tweet-something" placeholder='What happened today?' value={tweetText} onChange={handleChange}></textarea>
+          <textarea id="tweet-something" placeholder='What happened today?' value={tweetText} onChange={handleChange} ></textarea>
         </div>
 
         <div id="edit-tweet" className='flex align-center justify-between border-bottom'>

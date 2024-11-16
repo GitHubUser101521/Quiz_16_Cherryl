@@ -1,15 +1,14 @@
 import React, {useState, createContext} from 'react'
 import './CSS/header.css'
 import jsonData from './Accounts.json';
-import Tweet from './Tweet.jsx'
-import Accounts from './Accounts.jsx'
-import Navigation from './Navigation.jsx'
+import Content from './Content.jsx'
 
-export const accContext = createContext();
+export const currentAccountContext = createContext();
+export const accountsContext = createContext();
 
 function Header() {
   const [accounts, newAccount] = useState(jsonData.accounts)
-  const [currentAccount, setCurrentAccount] = useState('Cherryl28');
+  const [currentAccount, setCurrentAccount] = useState(accounts[0]);
 
   const handleAccChange = (e) => {
     if (e.target.value === 'new') {
@@ -44,21 +43,13 @@ function Header() {
           </select>
         </div>
       </div>
-      <div className='content-container'>
-      <div>
-        <Navigation />
-      </div>
-
-      <div>
-        <Tweet />
-      </div>
-
-      <div>
-        <Accounts />
-      </div>
-    </div>
+      <accountsContext.Provider value={accounts}>
+      <currentAccountContext.Provider value={currentAccount}>
+        <Content />
+      </currentAccountContext.Provider>
+      </accountsContext.Provider>
     </>
   )
 }
 
-export default Header
+export default Header;
