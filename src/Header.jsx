@@ -1,6 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, createContext} from 'react'
 import './CSS/header.css'
 import jsonData from './Accounts.json';
+import Tweet from './Tweet.jsx'
+import Accounts from './Accounts.jsx'
+import Navigation from './Navigation.jsx'
+
+export const accContext = createContext();
 
 function Header() {
   const [accounts, newAccount] = useState(jsonData.accounts)
@@ -20,24 +25,39 @@ function Header() {
   }
 
   return (
-    <div className='flex justify-between align-center container'>
+    <>
+      <div className='flex justify-between align-center container'>
+        <div>
+          <p className='color-orange size-half-rem'>SO<span className='weight-800'>CIO.</span></p>
+        </div>
+
+        <div className='flex align-center gap-10px'>
+          <img src="/public/check.png" alt="check-logo" className='logo'/>
+          <p className='color-gray'><i>verified</i></p>
+          <select id='account-select' onChange={handleAccChange}>
+            {accounts.map((acc) => (
+              <option key={acc} value={acc}>
+                {acc}
+              </option>
+            ))}
+            <option value="new">New Account</option>
+          </select>
+        </div>
+      </div>
+      <div className='content-container'>
       <div>
-        <p className='color-orange size-half-rem'>SO<span className='weight-800'>CIO.</span></p>
+        <Navigation />
       </div>
 
-      <div className='flex align-center gap-10px'>
-        <img src="/public/check.png" alt="check-logo" className='logo'/>
-        <p className='color-gray'><i>verified</i></p>
-        <select id='account-select' onChange={handleAccChange}>
-          {accounts.map((acc) => (
-            <option key={acc} value={acc}>
-              {acc}
-            </option>
-          ))}
-          <option value="new">New Account</option>
-        </select>
+      <div>
+        <Tweet />
+      </div>
+
+      <div>
+        <Accounts />
       </div>
     </div>
+    </>
   )
 }
 
