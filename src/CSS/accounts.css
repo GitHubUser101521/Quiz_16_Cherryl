@@ -53,6 +53,10 @@
     }
 }
 
+.acc-card:last-of-type {
+    margin-bottom: 2rem;
+}
+
 .follow-icon {
     position: absolute;
     right: 1rem;

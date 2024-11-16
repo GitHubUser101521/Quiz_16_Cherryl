@@ -33,7 +33,7 @@ function Header() {
         <div className='flex align-center gap-10px'>
           <img src="/public/check.png" alt="check-logo" className='logo'/>
           <p className='color-gray'><i>verified</i></p>
-          <select id='account-select' onChange={handleAccChange}>
+          <select id='account-select' onChange={handleAccChange} value={currentAccount}>
             {accounts.map((acc) => (
               <option key={acc} value={acc}>
                 {acc}

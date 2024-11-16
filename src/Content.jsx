@@ -8,9 +8,15 @@ import './CSS/content.css'
 function Content() {
   return (
     <div className='content-container'>
-      <Navigation />
-      <Tweet />
-      <Accounts />
+      <div>
+        <Navigation />
+      </div>
+      <div>
+        <Tweet />
+      </div>
+      <div>
+        <Accounts />
+      </div>
     </div>
   )
 }

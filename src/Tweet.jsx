@@ -1,6 +1,4 @@
 import React, { useState, useContext} from 'react'
-import UserTweets from './UserTweets.jsx'
-// UserTweets is for container all the tweet, but havent been developed
 import CharacterCounter from './CharacterCounter.jsx'
 import TimeLine from './Timeline.jsx'
 import './CSS/tweet.css'
@@ -11,7 +9,7 @@ function Tweet() {
   const [tweetText, setTweetText] = useState('')
   const [tweetsData, setTweetsData] = useState([]);
   const [newTweet, setNewTweet]= useState({
-    // account: currentaAccount,
+    account: currentAccount,
     tweet: tweetText,
     likes: 0,
     comments: 0,
@@ -19,20 +17,30 @@ function Tweet() {
   });
 
   const handleChange = (e) => {
-    console.log(tweetText)
-    setTweetText(e.target.value);
-    setNewTweet({
-      // account: currentaAccount,
-      tweet: tweetText,
-      likes: 0,
-      comments: 0,
-      shares: 0,
-    })
+    if (tweetText.length >= 150) {
+      alert('Your tweet is too long!')
+      setTweetText(tweetText.slice(0, -1))
+    } else {
+      setTweetText(e.target.value);
+      setNewTweet({
+        account: currentAccount,
+        tweet: tweetText,
+        likes: 0,
+        comments: 0,
+        shares: 0,
+      })
+    }
   }
 
   const handleTweetSubmit = () => {
     if (tweetText.trim() !== '') { // Check for empty tweets
-      setTweetsData([...tweetsData, { tweet: tweetText, likes: 0, comments: 0, shares: 0 }]);
+      setTweetsData([...tweetsData, { 
+        account: currentAccount,
+        tweet: tweetText, 
+        likes: 0, 
+        comments: 0, 
+        shares: 0 
+      }]);
       setTweetText('');
     }
   };
@@ -46,7 +54,7 @@ function Tweet() {
           </div>
 
           <textarea id="tweet-something" placeholder='What happened today?' value={tweetText} onChange={handleChange} ></textarea>
-a        </div>
+        </div>
 
         <div id="edit-tweet" className='flex align-center justify-between border-bottom'>
           <div className='flex gap-30px'>
