@@ -3,7 +3,7 @@ import React from 'react'
 function NoTweetFallback() {
 
     const divStyle = {
-        height: '10rem',
+        height: 'calc(100vh - 18rem)',
         display: 'flex',
         textAlign: 'center',
         alignItems: 'center',

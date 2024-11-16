@@ -45,24 +45,27 @@ function Tweet() {
   return (
     <>
       <div id="tweet-area">
-        <div className='flex gap-20px'>
-          <div id="profile-picture">
-            {currentAccount[0]}
+        <div id='background'></div>
+        <div id="tweet-area-sticky">
+          <div className='flex gap-20px'>
+            <div id="profile-picture">
+              {currentAccount[0]}
+            </div>
+
+            <textarea id="tweet-something" placeholder='What happened today?' value={tweetText} onChange={handleChange} ></textarea>
           </div>
 
-          <textarea id="tweet-something" placeholder='What happened today?' value={tweetText} onChange={handleChange} ></textarea>
-        </div>
+          <div id="edit-tweet" className='flex align-center justify-between border-bottom'>
+            <div className='flex gap-30px'>
+              <img src="/public/microphone.png" className='icon-24'/>
+              <img src="/public/image.png" className='icon-24'/>
+              <img src="/public/smile.png" className='icon-24'/>
+            </div>
 
-        <div id="edit-tweet" className='flex align-center justify-between border-bottom'>
-          <div className='flex gap-30px'>
-            <img src="/public/microphone.png" className='icon-24'/>
-            <img src="/public/image.png" className='icon-24'/>
-            <img src="/public/smile.png" className='icon-24'/>
-          </div>
-
-          <div style={{position: 'relative',}}>
-            <CharacterCounter value={tweetText}/>
-            <button onClick={handleTweetSubmit}>Share</button>
+            <div style={{position: 'relative',}}>
+              <CharacterCounter value={tweetText}/>
+              <button onClick={handleTweetSubmit}>Share</button>
+            </div>
           </div>
         </div>
 

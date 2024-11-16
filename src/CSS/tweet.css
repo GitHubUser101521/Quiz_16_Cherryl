@@ -23,6 +23,8 @@
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 0 6px 0 rgb(193, 193, 193);
+    height: calc(100vh - 9rem);
+    overflow-y: scroll;
 }
 
 #edit-tweet {
@@ -63,4 +65,24 @@
     p {
         word-wrap: break-word;
     }
+}
+
+#tweet-area-sticky {
+    position: sticky;
+    z-index: 20;
+    background-color: white;
+    top: 0;
+    height: 8rem;
+    width: 100%;
+}
+
+#background {
+    background-color: white;
+    width: calc(100vw - 64rem);
+    height: 10rem;
+    position: absolute;
+    top: 6rem;
+    left: 32rem;
+    border-radius: 10px;
+    z-index: 10;
 }
