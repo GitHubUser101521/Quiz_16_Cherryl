@@ -3,7 +3,6 @@ import './CSS/comments.css'
 import { currentAccountContext } from './Header.jsx'
 
 function Comments({comments, closeFunc}) {
-    console.log(comments)
     const currentAccount = useContext(currentAccountContext);
     const [newComment, setNewComment] = useState('');
 

@@ -32,7 +32,7 @@ function Timeline({data}) {
       {data.map((tweet, index) => (
         <div key={index} className='tweet-card'>
           <div className='flex align-center gap-10px'>
-            <div className='profile-picture'>{tweet.account[0]}</div>
+            <div className='profile-picture' style={{backgroundColor: {}}}>{tweet.account[0]}</div>
 
             <p className='weight-800'>{tweet.account}</p>
 
