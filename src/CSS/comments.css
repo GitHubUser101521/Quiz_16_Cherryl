@@ -1,0 +1,15 @@
+.comments-box {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 6px 0 rgb(231, 231, 231);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    height: 80%;
+    min-width: 50%;
+    max-width: 95%;
+    border-radius: 20px;
+}
+

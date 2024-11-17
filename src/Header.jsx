@@ -14,6 +14,11 @@ function Header() {
     if (e.target.value === 'new') {
       const newAccName = prompt('Enter new account name:');
       if (newAccName) {
+        if (newAccName.length > 10) {
+          alert('Account name too long!');
+          return;
+        }
+
         newAccount([...accounts, newAccName]);
         setCurrentAccount(newAccName);
         e.target.value = newAccName;

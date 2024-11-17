@@ -9,7 +9,16 @@ function Tweet() {
   const newTime = new Date().toLocaleString();
   const currentAccount = useContext(currentAccountContext);
   const [tweetText, setTweetText] = useState('')
-  const [tweetsData, setTweetsData] = useState([]);
+  const [tweetsData, setTweetsData] = useState([
+    { 
+      account: 'Cherryl28',
+      tweet: 'Hi', 
+      timeStamp: newTime,
+      likes: 0, 
+      comments: [], 
+      shares: 0 
+    }
+  ]);
   const [newTweet, setNewTweet]= useState();
 
   const handleChange = (e) => {
@@ -18,13 +27,6 @@ function Tweet() {
       setTweetText(tweetText.slice(0, -1))
     } else {
       setTweetText(e.target.value);
-      setNewTweet({
-        account: currentAccount,
-        tweet: tweetText,
-        likes: 0,
-        comments: 0,
-        shares: 0,
-      })
     }
   }
 
@@ -35,7 +37,7 @@ function Tweet() {
         tweet: tweetText, 
         timeStamp: newTime,
         likes: 0, 
-        comments: 0, 
+        comments: [], 
         shares: 0 
       }]);
       setTweetText('');

@@ -78,11 +78,11 @@
 
 #background {
     background-color: white;
-    width: calc(100vw - 64rem);
+    width: calc(calc(100vw - 64rem) - 5px);
     height: 10rem;
     position: absolute;
     top: 6rem;
-    left: 32rem;
+    left: calc(31rem + 1.2rem);
     border-radius: 10px;
     z-index: 10;
 }

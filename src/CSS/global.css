@@ -69,3 +69,23 @@ h3, h2, p {
 .border-bottom {
     box-shadow: 0 4px 7px -5px rgb(211, 211, 211);
 }
+
+.background-black {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    filter: opacity(50%);
+}
+
+.close-btn {
+    font-size: 2rem;
+    color: gray;
+    height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    margin-top: -7px;
+}
