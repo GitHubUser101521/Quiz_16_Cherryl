@@ -16,7 +16,7 @@ function Timeline({data}) {
     setDetection(true);
   }
 
-  const openComment = () => {
+  const openComment = (i) => {
     setCommentVisibility(true)
   }
 
@@ -45,7 +45,7 @@ function Timeline({data}) {
               <p>{tweet.likes}</p>
             </div>
 
-            <div className='interact-icon' onClick={() => openComment()}>
+            <div className='interact-icon' onClick={() => openComment(index)}>
               <img src="/public/chat-bubble.png"/>
               <p>{tweet.comments.length}</p>
             </div>

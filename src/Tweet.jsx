@@ -66,7 +66,7 @@ function Tweet() {
 
             <div style={{position: 'relative',}}>
               <CharacterCounter value={tweetText}/>
-              <button onClick={handleTweetSubmit}>Share</button>
+              <button onClick={handleTweetSubmit} className='orange-btn'>Share</button>
             </div>
           </div>
         </div>
